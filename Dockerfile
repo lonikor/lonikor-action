@@ -1,10 +1,8 @@
 FROM alpine
 
 RUN apk add --no-cache \
-    bash \
-    which bash
+        bash
 
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["entrypoint.sh"]
