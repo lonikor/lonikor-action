@@ -1,3 +1,4 @@
-set -x
+#!/bin/bash
+set -e
 
 echo "Hello action!"
